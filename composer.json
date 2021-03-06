@@ -1,0 +1,18 @@
+{
+    "name": "masoud/two-factor-auth",
+    "description": "Two factor authenticated for laravel-ui",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Masoud Ghadimi",
+            "email": "masoudghadimi@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Masoud\\Twofactorauth\\" : "src/"
+        }
+    },
+    "require": {}
+}
