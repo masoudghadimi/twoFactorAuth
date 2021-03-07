@@ -6,7 +6,7 @@ Laravel Two-Factor Authenticated For <b>Laravel/Ui</b>
 
 1) Install package - using composer
 
-`composer require masoudghadimi/twoFactorAuth`
+`composer require masoudghadimi/two-factor-auth`
 
 2) Publish configuration file
 
