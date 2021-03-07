@@ -1,7 +1,11 @@
 {
     "name": "masoudghadimi/two-factor-auth",
     "description": "Two factor authenticated for laravel-ui",
-    "type": "project",
+    "keywords": [
+        "laravel",
+        "twoFacthor",
+        "authenticate"
+    ],
     "license": "MIT",
     "authors": [
         {
