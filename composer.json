@@ -1,5 +1,5 @@
 {
-    "name": "masoud/two-factor-auth",
+    "name": "masoudghadimi/two-factor-auth",
     "description": "Two factor authenticated for laravel-ui",
     "type": "project",
     "license": "MIT",
