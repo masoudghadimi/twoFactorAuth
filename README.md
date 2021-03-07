@@ -6,7 +6,7 @@ Laravel Two-Factor Authenticated For <b>Laravel/Ui</b>
 
 1) Install package - using composer
 
-`composer install`
+`composer require masoudghadimi/twoFactorAuth`
 
 2) Publish configuration file
 
@@ -63,7 +63,7 @@ Open configuration file - config/twoFactor.php
 - Change the expiration time
 - Change the number of digits in the code
 
-<h4>Next step</h4>
+<h3>Next step</h3>
 
 Edit notification files to suit your needs (app/Notifications)
 
