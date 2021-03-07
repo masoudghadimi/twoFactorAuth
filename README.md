@@ -2,6 +2,8 @@
 Laravel Two-Factor Authenticated For <b>Laravel/Ui</b>
 
 
+<h1>This package is being developed and debugged</h1>
+
 <h2>Install</h2>
 
 1) Install package - using composer
@@ -12,7 +14,25 @@ Laravel Two-Factor Authenticated For <b>Laravel/Ui</b>
 
 `php artisan vendor:publish --tag=twoFactor`
 
-3) Add this codes to the User model (app/Models/User)
+3) Migration
+
+`php artisan migrate`
+
+4) Update User model (app/Models/User)
+
+```php
+
+protected $fillable = [
+     'name',
+     'email',
+     'password',
+     'phone_number',
+     'two_factor_type'
+];
+
+```
+
+5) Add this codes to the User model (app/Models/User)
 
 ```php
 
@@ -23,7 +43,7 @@ public function verifyCodes()
 
 ```
 
-4) Add this codes to the LoginController (app/Http/Auth/LoginController)
+6) Add this codes to the LoginController (app/Http/Auth/LoginController)
 
 ```php
 
