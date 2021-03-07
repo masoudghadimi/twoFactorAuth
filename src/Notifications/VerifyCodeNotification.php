@@ -1,17 +1,13 @@
 <?php
 
 
-namespace Masoud\Twofactorauth\notification;
+namespace Masoud\Twofactorauth\Notifications;
 
 
-use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
-use Masoud\Twofactorauth\notification\channels\SmsVerifyCodeChannels;
 
 class VerifyCodeNotification extends Notification
 {
-    use Queueable;
-
     public $code;
 
     public $phone_number;
@@ -33,7 +29,7 @@ class VerifyCodeNotification extends Notification
      */
     public function via($notifiable): array
     {
-        return [SmsVerifyCodeChannels::class];
+        return [config('twoFactor.notificationsChannels')];
     }
 
     /**

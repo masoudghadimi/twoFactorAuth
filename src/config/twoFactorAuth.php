@@ -18,6 +18,11 @@ return [
     'redirectRouteName' => 'login',
 
     /*
+     *  Create your channel and call it here
+     */
+    'notificationsChannels' => '',
+
+    /*
      *  Generates code between min and max numbers
      */
     'min' => 1000000,

@@ -18,5 +18,12 @@
             "Masoud\\Twofactorauth\\" : "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Masoud\\Twofactorauth\\TwoFactorAuthServiceProvider"
+            ]
+        }
+    },
     "require": {}
 }

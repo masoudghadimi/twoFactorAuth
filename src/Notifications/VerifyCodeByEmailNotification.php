@@ -1,17 +1,14 @@
 <?php
 
 
-namespace Masoud\Twofactorauth\notification;
+namespace Masoud\Twofactorauth\Notifications;
 
 
-use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class SendVerifyCodeByEmailNotification extends Notification
+class VerifyCodeByEmailNotification extends Notification
 {
-    use Queueable;
-
     public $code;
 
     public $email;

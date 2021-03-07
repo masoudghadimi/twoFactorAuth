@@ -24,7 +24,6 @@ class TwoFactorAuthServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/views/twoFactorAuth' => resource_path('views/vendor/TwoFactorAuth'),
             __DIR__ . '/config/twoFactorAuth.php' => config_path('twoFactor.php'),
-            __DIR__ . '/notification' => app_path('Notifications'),
         ] , 'twoFactor');
     }
 

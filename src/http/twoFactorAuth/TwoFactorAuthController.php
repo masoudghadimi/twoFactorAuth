@@ -8,10 +8,8 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use League\Flysystem\Config;
 use Masoud\Twofactorauth\models\VerifyCode;
-use Masoud\Twofactorauth\notification\VerifyCodeNotification;
-use phpDocumentor\Reflection\Types\This;
+use Masoud\Twofactorauth\Notifications\VerifyCodeNotification;
 
 class TwoFactorAuthController extends Controller
 {
