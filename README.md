@@ -64,7 +64,7 @@ protected function authenticated(Request $request, $user)
               $user->notify(new VerifyCodeNotification($code , $user->phone_number));
           }
           elseif ($type == 'email') {
-              $user->notify(new SendVerifyCodeByEmailNotification($code , $user->email));
+              $user->notify(new VerifyCodeByEmailNotification($code , $user->email));
           }
 
           return redirect(route('send.verify.code'));
