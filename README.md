@@ -79,12 +79,13 @@ protected function authenticated(Request $request, $user)
 
 Open configuration file - config/twoFactor.php
 
+- Detect the channel
 - change the route prefix
 - Change the expiration time
 - Change the number of digits in the code
 
 <h3>Next step</h3>
 
-Edit notification files to suit your needs (app/Notifications)
+Create channel file and then put it in the config file (notificationsChannels)
 
 <h3 align="center">Good luck</h3>
