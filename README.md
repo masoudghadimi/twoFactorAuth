@@ -46,31 +46,11 @@ public function verifyCodes()
 6) Add this codes to the LoginController (app/Http/Auth/LoginController)
 
 ```php
+use TwoFactorAuthenticate;
 
 protected function authenticated(Request $request, $user)
 {
-     if ($type = $user->two_factor_type != 'off') {
-          auth()->logout();
-
-          $request->session()->flash('auth' , [
-              'user_id' => $user->id,
-              'remember' => $request->has('remember'),
-              'type' => $user->two_factor_type
-          ]);
-
-          $code = VerifyCode::getVerifyCode($user);
-
-          if ($type == 'sms') {
-              $user->notify(new VerifyCodeNotification($code , $user->phone_number));
-          }
-          elseif ($type == 'email') {
-              $user->notify(new SendVerifyCodeByEmailNotification($code , $user->email));
-          }
-
-          return redirect(route('send.verify.code'));
-      }
-
-      return false;
+     return $this->loggedIn($request , $user);
 }
 
 ```
