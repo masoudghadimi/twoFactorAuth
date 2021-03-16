@@ -68,4 +68,48 @@ Open configuration file - config/twoFactor.php
 
 Create channel file and then put it in the config file (notificationsChannels)
 
+<b>for example</b> : 
+
+create SmsVerifyCodeChannel.php in app/channels then enter your desired code as below
+
+```php
+
+class SmsVerifyCodeChannel
+{
+    public function send($notifiable, Notification $notification)
+    {
+        if (! method_exists($notification , 'toSendVerifyCode')) {
+            throw new \Exception('toSendVerifyCode not found');
+        }
+
+        $data = $notification->toSendVerifyCode($notifiable);
+
+        $message = $data['message'];
+        $phone = $data['number'];
+
+        try{
+            $lineNumber = 1111111;
+            $api = new \Ghasedak\GhasedakApi('token');
+            $api->SendSimple($phone, $message, $lineNumber);
+        }
+        catch(ApiException $e){
+            echo $e->errorMessage();
+        }
+        catch(HttpException $e){
+            echo $e->errorMessage();
+        }
+    }
+}
+
+```
+
+Next, enter the config/twofactor.php file and in the <b>notificationsChannels</b> section, enter the created channel as follows:
+
+```php
+
+'notificationsChannels' => \App\channels\SmsVerifyCodeChannel::class,
+
+```
+
+
 <h3 align="center">Good luck</h3>
