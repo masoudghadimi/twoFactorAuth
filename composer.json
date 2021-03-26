@@ -4,7 +4,8 @@
     "keywords": [
         "laravel",
         "twoFacthor",
-        "authenticate"
+        "authenticate",
+        "auth"
     ],
     "license": "MIT",
     "authors": [
@@ -25,5 +26,7 @@
             ]
         }
     },
-    "require": {}
+    "require": {
+        "illuminate/support": "^8.0"
+    }
 }

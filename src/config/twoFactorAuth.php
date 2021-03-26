@@ -18,9 +18,19 @@ return [
     'redirectRouteName' => 'login',
 
     /*
+     * Route name of user profile
+     */
+    'profileRouteName' => 'home',
+
+    /*
      *  Create your channel and call it here
      */
     'notificationsChannels' => '',
+
+    /*
+     *  Notification message for sms and email
+     */
+    'notificationMessage' => "Your authentication code: {$this->code}",
 
     /*
      *  Generates code between min and max numbers

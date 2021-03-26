@@ -45,9 +45,7 @@ class VerifyCodeByEmailNotification extends Notification
     public function toMail($notifiable): MailMessage
     {
         return (new MailMessage)
-            ->line('Your authentication code: ')
-            ->line("{$this->code}")
-            ->with('The deadline for using this code is 15 minutes');
+            ->line(config('twoFactor.notificationMessage'));
     }
 
     /**

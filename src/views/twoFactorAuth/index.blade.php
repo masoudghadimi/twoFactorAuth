@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <a href="{{ route('home') }}" class="mr-3">{{ __('Dashboard') }}</a>
+                        <a href="{{ route(config('twoFactor.profileRouteName')) }}" class="mr-3">{{ __('Dashboard') }}</a>
                         <a href="{{ route('security') }}" class="btn btn-primary">{{ __('Security') }}</a>
                     </div>
 
