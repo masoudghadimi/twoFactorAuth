@@ -68,7 +68,7 @@ Open configuration file - config/twoFactor.php
 
 Create channel file and then put it in the config file (notificationsChannels)
 
-<b>for example</b> : 
+<b>For example</b> : 
 
 create SmsVerifyCodeChannel.php in app/channels then enter your desired code as below
 
@@ -111,5 +111,12 @@ Next, enter the config/twofactor.php file and in the <b>notificationsChannels</b
 
 ```
 
+<h3>Last step</h3>
+
+Go to the link below : 
+
+`
+localhost:8000/profile/security
+`
 
 <h3 align="center">Good luck</h3>
