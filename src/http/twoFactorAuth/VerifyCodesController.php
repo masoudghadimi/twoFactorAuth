@@ -23,7 +23,7 @@ class VerifyCodesController extends Controller
 
         $request->session()->reflash();
 
-        return view('twoFactor::auth.show');
+        return view('vendor.TwoFactorAuth.auth.show');
     }
 
     /**

@@ -18,7 +18,7 @@ class TwoFactorAuthController extends Controller
      */
     public function index()
     {
-        return view('twoFactor::index');
+        return view('vendor.TwoFactorAuth.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class TwoFactorAuthController extends Controller
      */
     public function enable()
     {
-        return view('twoFactor::enable');
+        return view('vendor.TwoFactorAuth.enable');
     }
 
     /**
@@ -68,7 +68,7 @@ class TwoFactorAuthController extends Controller
         //send code
         auth()->user()->notify(new VerifyCodeNotification($code , $request->session()->get('phone')));
 
-        return view('twoFactor::verify-phone');
+        return view('vendor.TwoFactorAuth.verify-phone');
     }
 
 
