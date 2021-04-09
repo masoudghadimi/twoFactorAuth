@@ -1,5 +1,5 @@
-# twoFactorAuth
-Laravel Two-Factor Authenticated For <b>Laravel/Ui</b>
+<h1 align="center">twoFactorAuth</h1>
+<p align="center">Laravel Two-Factor Authenticated For <b>Laravel/Ui</b></p>
 
 
 <h1>This package is being developed and debugged</h1>
