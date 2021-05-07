@@ -39,7 +39,7 @@ class VerifyCodeNotification extends Notification
     public function toSendVerifyCode($notifiable): array
     {
         return [
-            'message' => config('twoFactor.notificationMessage'),
+            'message' => config('twoFactor.notificationMessage') . $this->code,
             'number' => $this->phone_number
         ];
     }

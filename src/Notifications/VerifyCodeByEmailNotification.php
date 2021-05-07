@@ -45,7 +45,7 @@ class VerifyCodeByEmailNotification extends Notification
     public function toMail($notifiable): MailMessage
     {
         return (new MailMessage)
-            ->line(config('twoFactor.notificationMessage'));
+            ->line(config('twoFactor.notificationMessage') . $this->code);
     }
 
     /**

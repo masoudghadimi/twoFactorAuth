@@ -29,8 +29,9 @@ return [
 
     /*
      *  Notification message for sms and email
+     *  preview => Your authentication code: 1122334455
      */
-    'notificationMessage' => "Your authentication code: {$this->code}",
+    'notificationMessage' => "Your authentication code: ",
 
     /*
      *  Generates code between min and max numbers
