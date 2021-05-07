@@ -116,7 +116,7 @@ Next, enter the config/twofactor.php file and in the <b>notificationsChannels</b
 Go to the link below : 
 
 `
-localhost:8000/profile/security
+localhost:8000/home/security
 `
 
 <h3 align="center">Good luck</h3>
